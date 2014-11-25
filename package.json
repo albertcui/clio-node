@@ -1,0 +1,9 @@
+{
+    "name": "clio",
+    "description": "clio stuff",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "solr-client": "0.4.0"
+	}
+}
