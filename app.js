@@ -3,14 +3,17 @@ var solr = require('solr-client'),
     express = require('express'),
     app = express()
 
-app.route('/').get(function(req, res){
+app.use('/assets', express.static(__dirname + '/assets'));
+app.use(express.static(__dirname + '/views'));
+
+app.route('/search').get(function(req, res){
     client.search('q=potato', function(err, obj){
         res.send(obj.response.docs)
     })
 })
 
-
 app.listen(5000)
+
 /*                 
 var request = client.search('q=hello', function(err, obj){
     obj.response.docs.forEach(function(doc){
