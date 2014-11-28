@@ -8,7 +8,8 @@ clioApp.controller('SearchController', function($scope, $http){
             params: {search: $scope.searchText }
         })
         .success(function(data, status, headers, config){
-    		console.log(data)
+        	$('.jumbotron').hide()
+    		$scope.results = data
         })
         .error(function(data, status, headers, config){
 

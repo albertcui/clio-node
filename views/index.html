@@ -15,11 +15,12 @@
 
     <!-- Custom styles for this template -->
     <link href="/assets/css/jumbotron-narrow.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
     <script src="/assets/js/controllers.js"></script>
   </head>
 
-  <body>
+  <body ng-controller="SearchController">
     <div class="container">
 
       <div class="header">
@@ -45,7 +46,7 @@
         
       </div>
 
-      <div class="row marketing" ng-controller="SearchController">
+      <div class="row marketing">
         
         <!-- HTML for SEARCH BAR -->
         <div class="search_boxes pull-left">
@@ -85,9 +86,17 @@
 
       </div>
 
-      <div class="footer">
-        <p>&copy;Columbia University 2014 - DAPME, Team Lima</p>
+      <div id="results">
+        <ul class="unstyled">
+          <li ng-repeat="result in results">
+            <span class="done-{{todo.done}}">{{result}}</span>
+          </li>
+        </ul>
       </div>
+
+      <footer class="footer">
+        <p>&copy;Columbia University 2014 - DAPME, Team Lima</p>
+      </footer>
 
     </div> <!-- /container -->
 
