@@ -1,5 +1,6 @@
-var solr = require('solr-client'),
-    client = solr.createClient('clio-lab.cul.columbia.edu', 8983, null, '/solr-4.2.1/spectrum_lab'),
+var config = require('./config.js'),
+    solr = require('solr-client'),
+    client = solr.createClient(config.host, config.port, null, config.route),
     express = require('express'),
     app = express()
 

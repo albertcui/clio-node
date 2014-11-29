@@ -1,0 +1,7 @@
+var config = []
+
+config.host =
+config.port = 
+config.route = 
+
+module.exports = config
