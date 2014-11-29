@@ -8,7 +8,13 @@ app.use(express.static(__dirname + '/views'));
 
 app.route('/search.json').get(function(req, res){
     var search = req.query.search
-    client.search('q=' + search, function(err, obj){
+
+    var query = client.createQuery()
+                  .q(search)
+                  .start(0)
+                  .rows(10);
+
+    client.search(query, function(err, obj){
         res.send(obj.response.docs)
     })
 })
