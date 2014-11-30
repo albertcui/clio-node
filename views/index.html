@@ -15,6 +15,7 @@
 
     <!-- Custom styles for this template -->
     <link href="/assets/css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="/assets/css/searchResult.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
     <script src="/assets/js/controllers.js"></script>
@@ -87,9 +88,52 @@
       </div>
 
       <div id="results">
-        <ul class="unstyled">
-          <li ng-repeat="result in results">
-            <span class="done-{{todo.done}}">{{result}}</span>
+        <ul class="unstyled" style="list-style: none;">
+          <hgroup class="mb20">
+            <h1>Search Results</h1>
+            <h2 class="lead"><strong class="text-danger">{{results.length}}</1> results were found.</h2>               
+          </hgroup>
+            
+          <li class="search-result row" ng-repeat="result in results" >
+            <section class="col-md-12">
+                <article>
+                  <div class="col-md-7">
+                    <h3><a href="#">{{result.title_display[0]}}</a></h3>
+             
+                    <div ng-repeat="(key, value) in desc">
+                        <div ng-if="result[value]">
+                            <div class="col-md-3">
+                                {{key}}
+                            </div>
+                            <div class="col-md-9">
+                                {{result[value][0]}}
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                    
+                  <div class="col-md-2">
+                    <ul class="meta-search">
+                      <li><i class="glyphicon glyphicon-envelope"></i> <span>Email</span></li>
+                      <li><i class="glyphicon glyphicon-comment"></i> <span>SMS</span></li>
+                      <li><i class="glyphicon glyphicon-shopping-cart"></i> <span>Checkout</span></li>
+                      <li><i class="glyphicon glyphicon-download-alt"></i> <span>Download</span></li>
+                    </ul>
+                  </div>
+                    
+                  <div class="col-md-3">
+                    <h3><a href="#" title="">Location</a></h3>
+                    <div ng-if="result.url_munged_display">
+                        Online: {{result.url_munged_display}}
+                    </div>
+                    <div ng-else="result.location_facet">
+                        {{result.location_facet[0]}}
+                    </div>
+                    
+                    <span class="plus"><a href="#" title="Detailed Info"><i class="glyphicon glyphicon-plus"></i></a></span>
+                  </div>
+                </article>
+              </section>
           </li>
         </ul>
       </div>

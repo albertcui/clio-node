@@ -9,7 +9,11 @@ clioApp.controller('SearchController', function($scope, $http){
         })
         .success(function(data, status, headers, config){
         	$('.jumbotron').hide()
+            console.log(data)
     		$scope.results = data
+            $scope.desc = {'Author':'author_display',
+                             'Publisher':'full_publisher_display'
+                            }
         })
         .error(function(data, status, headers, config){
 
