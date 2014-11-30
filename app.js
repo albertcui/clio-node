@@ -9,14 +9,15 @@ app.use(express.static(__dirname + '/views'));
 
 app.route('/search.json').get(function(req, res){
     var search = req.query.search
+    var start = req.query.offset
 
     var query = client.createQuery()
                   .q(search)
-                  .start(0)
+                  .start(start)
                   .rows(10);
 
     client.search(query, function(err, obj){
-        res.send(obj.response.docs)
+        res.send(obj.response)
     })
 })
 

@@ -17,6 +17,7 @@
     <link href="/assets/css/jumbotron-narrow.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
+    <script src="/assets/js/ui-bootstrap-tpls-0.12.0.min.js"></script>
     <script src="/assets/js/controllers.js"></script>
   </head>
 
@@ -89,10 +90,12 @@
       <div id="results">
         <ul class="unstyled">
           <li ng-repeat="result in results">
-            <span class="done-{{todo.done}}">{{result}}</span>
+            <span>{{result.title_display}}</span>
           </li>
         </ul>
       </div>
+
+      <pagination total-items="totalItems" ng-change="pageChanged()"ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
 
       <footer class="footer">
         <p>&copy;Columbia University 2014 - DAPME, Team Lima</p>
