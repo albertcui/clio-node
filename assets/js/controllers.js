@@ -7,11 +7,28 @@ clioApp.controller('SearchController', function($scope, $http){
 	$scope.currentPage = 1;
 
 	$scope.search = function() {
-		console.log("doin search")
+
+		var media = []
+		if($scope.book) {
+			media.push('Book')
+		}
+
+		if ($scope.article) {
+			media.push('Article')
+		}
+
+		if ($scope.ebook) {
+			media.push('Online')
+		}
+
+		if ($scope.journal) {
+			media.push('Journal')
+		}
+
         $http({
             method:'GET',
             url: '/search.json',
-            params: {search: $scope.searchText, offset: ($scope.currentPage - 1) * 10 }
+            params: {search: $scope.searchText, offset: ($scope.currentPage - 1) * 10, types: media }
         })
         .success(function(data, status, headers, config){
             $scope.desc = {'Author':'author_display',
@@ -21,6 +38,7 @@ clioApp.controller('SearchController', function($scope, $http){
         	$scope.hideResults = false;
         	$scope.totalItems = data.numFound
     		$scope.results = data.docs
+    		console.log(data)
         })
         .error(function(data, status, headers, config){
 
