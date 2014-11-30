@@ -18,6 +18,7 @@
     <link href="/assets/css/searchResult.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
+    <script src="/assets/js/ui-bootstrap-tpls-0.12.0.min.js"></script>
     <script src="/assets/js/controllers.js"></script>
   </head>
 
@@ -42,7 +43,7 @@
         <h3></h3>
       </div>
       
-      <div class="jumbotron">
+      <div class="jumbotron" ng-hide="hideJumbotron">
         <h1>CLIO</h1>
         
       </div>
@@ -87,7 +88,7 @@
 
       </div>
 
-      <div id="results">
+      <div id="results" ng-hide="hideResults">
         <ul class="unstyled" style="list-style: none;">
           <hgroup class="mb20">
             <h1>Search Results</h1>
@@ -136,6 +137,8 @@
               </section>
           </li>
         </ul>
+
+        <pagination total-items="totalItems" ng-change="pageChanged()"ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
       </div>
 
       <footer class="footer">
