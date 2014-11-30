@@ -92,7 +92,7 @@
         <ul class="unstyled" style="list-style: none;">
           <hgroup class="mb20">
             <h1>Search Results</h1>
-            <h2 class="lead"><strong class="text-danger">{{results.length}}</1> results were found.</h2>               
+            <h2 class="lead"><strong class="text-danger">{{results.length}}</strong> results were found.</h2>               
           </hgroup>
             
           <li class="search-result row" ng-repeat="result in results" >
@@ -115,24 +115,23 @@
                     
                   <div class="col-md-2">
                     <ul class="meta-search">
-                      <li><i class="glyphicon glyphicon-envelope"></i> <span>Email</span></li>
-                      <li><i class="glyphicon glyphicon-comment"></i> <span>SMS</span></li>
+                      <li><i class="glyphicon glyphicon-envelope"></i> <span>Email Info</span></li>
+                      <li><i class="glyphicon glyphicon-comment"></i> <span>SMS Info</span></li>
                       <li><i class="glyphicon glyphicon-shopping-cart"></i> <span>Checkout</span></li>
                       <li><i class="glyphicon glyphicon-download-alt"></i> <span>Download</span></li>
                     </ul>
                   </div>
                     
                   <div class="col-md-3">
-                    <h3><a href="#" title="">Location</a></h3>
+                    <h3>Location</h3>
                     <div ng-if="result.url_munged_display">
                         Online: {{result.url_munged_display}}
                     </div>
                     <div ng-else="result.location_facet">
                         {{result.location_facet[0]}}
                     </div>
-                    
-       
                   </div>
+                    
                   <span class="plus"><a ng-href="http://clio.columbia.edu/catalog/{{result['clio_id_display']}}?counter=1" title="Detailed Info"><i class="glyphicon glyphicon-plus"></i></a></span>
                 </article>
               </section>
