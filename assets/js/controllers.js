@@ -1,6 +1,8 @@
 var clioApp = angular.module('clioApp', ['ui.bootstrap'])
 
 clioApp.controller('SearchController', function($scope, $http){
+	$scope.hideJumbotron = false;
+	$scope.hideResults = true;
 	$scope.maxSize = 5
 	$scope.currentPage = 1;
 
@@ -12,8 +14,8 @@ clioApp.controller('SearchController', function($scope, $http){
             params: {search: $scope.searchText, offset: ($scope.currentPage - 1) * 10 }
         })
         .success(function(data, status, headers, config){
-        	$('.jumbotron').hide();
-        	console.log(data)
+        	$scope.hideJumbotron = true;
+        	$scope.hideResults = false;
         	$scope.totalItems = data.numFound
     		$scope.results = data.docs
         })

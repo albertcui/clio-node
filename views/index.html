@@ -42,7 +42,7 @@
         <h3></h3>
       </div>
       
-      <div class="jumbotron">
+      <div class="jumbotron" ng-hide="hideJumbotron">
         <h1>CLIO</h1>
         
       </div>
@@ -87,15 +87,15 @@
 
       </div>
 
-      <div id="results">
+      <div id="results" ng-hide="hideResults">
         <ul class="unstyled">
           <li ng-repeat="result in results">
             <span>{{result.title_display}}</span>
           </li>
         </ul>
-      </div>
 
-      <pagination total-items="totalItems" ng-change="pageChanged()"ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+        <pagination total-items="totalItems" ng-change="pageChanged()"ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+      </div>
 
       <footer class="footer">
         <p>&copy;Columbia University 2014 - DAPME, Team Lima</p>
