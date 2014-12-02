@@ -10,7 +10,12 @@ app.use(express.static(__dirname + '/views'));
 app.route('/search.json').get(function(req, res){
     var search = req.query.search
     var start = req.query.offset
-    console.log(req.query.types)
+    var types = req.query.types
+
+    if (types) {
+        search += "&fq=format:(" + types.join(" OR ") + ")"
+    }
+
     var query = client.createQuery()
                   .q(search)
                   .start(start)
@@ -31,14 +36,3 @@ client.search(query, function(err, obj){
 */
 
 app.listen(5000)
-
-/*  "2140607"  */
-
-http://clio-lab.cul.columbia.edu:8983/solr-4.2.1/spectrum_lab/select?q=hello&fq=format:(%22Music%20-%20Recording%22%20OR%20Book)
-var request = client.search('q=hello&facet=on&facet.field=format&fq=format:[Book]', function(err, obj){
-    console.log(err)
-    console.log(obj)
-    // obj.response.docs.forEach(function(doc){
-    //     console.log(doc)
-    // })
-});
