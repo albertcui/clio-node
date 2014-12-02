@@ -12,26 +12,23 @@ app.route('/search.json').get(function(req, res){
     var start = req.query.offset
     var types = req.query.types
 
+    var query = client.createQuery()
+                      .q(search)
+
     if (types) {
-        search += "&fq=format:("
 
         if (Array.isArray(types)) {
-            search += types.join(" OR ") + ")"    
-        } else {
-            search += types + ")"
+            types = types.join(" OR ")    
         }
 
-                          .matchFilter('format', types)
+        query.set('fq=format:(' + encodeURI(types) + ")")
         
     }
 
-    search = encodeURI(search)
+    query.start(start)
+         .rows(10);
 
-    console.log(search)
-    var query = client.createQuery()
-                  .q(search)
-                  .start(start)
-                  .rows(10);
+    console.log(query)
 
     client.search(query, function(err, obj){
         res.send(obj.response)
