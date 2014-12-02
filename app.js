@@ -13,9 +13,21 @@ app.route('/search.json').get(function(req, res){
     var types = req.query.types
 
     if (types) {
-        search += "&fq=format:(" + types.join(" OR ") + ")"
+        search += "&fq=format:("
+
+        if (Array.isArray(types)) {
+            search += types.join(" OR ") + ")"    
+        } else {
+            search += types + ")"
+        }
+
+                          .matchFilter('format', types)
+        
     }
 
+    search = encodeURI(search)
+
+    console.log(search)
     var query = client.createQuery()
                   .q(search)
                   .start(start)
