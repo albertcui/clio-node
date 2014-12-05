@@ -1,6 +1,6 @@
 var clioApp = angular.module('clioApp', ['ui.bootstrap'])
 
-clioApp.controller('SearchController', function($scope, $http){
+clioApp.controller('SearchController', function($scope, $http, $location){
 	$scope.hideJumbotron = false;
 	$scope.hideResults = true;
 	$scope.maxSize = 5
@@ -24,6 +24,8 @@ clioApp.controller('SearchController', function($scope, $http){
 		if ($scope.journal) {
 			media.push('Journal')
 		}
+
+        $location.path('/search').search({q: $scope.searchText})
 
         $http({
             method:'GET',
