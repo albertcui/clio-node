@@ -83,7 +83,8 @@
 
         <div name="advanced">
             <a href="#" ng-click="advancedSearch = !advancedSearch">
-                <i class="glyphicon glyphicon-plus-sign"></i>
+                <span ng-show="advancedSearch"><i class="glyphicon glyphicon-minus-sign"></i></span>
+                <span ng-show="!advancedSearch"><i class="glyphicon glyphicon-plus-sign"></i></span>
                 <font size="4">Advanced</font>
             </a>
             <div ng-show="advancedSearch" ng-repeat="field in advancedSearchFields">
