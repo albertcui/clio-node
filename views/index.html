@@ -78,13 +78,20 @@
           <div class ="col-md-2 col-md-offset-2"><label><input type="checkbox" ng-model="article"> Article</label></div>
           <div class ="col-md-2"><label><input type="checkbox" ng-model="book"> Book</label></div>
           <div class ="col-md-2"><label><input type="checkbox" ng-model="ebook"> E-Book</label></div>
-          <div class ="col-md-2"><label><input type="checkbox" ng-model="journal"> Journals</label>
-        </div>
-      </div> <!-- /row -->
+          <div class ="col-md-2"><label><input type="checkbox" ng-model="journal"> Journals</label></div>
+        </div> <!-- /row -->
 
-        <div><br/></div>
-        <a href="advanced.html"><i class="glyphicon glyphicon-plus-sign"></i>
-        <font size="4">Advanced</font></a>
+        <div name="advanced">
+            <a href="#" ng-click="advancedSearch = !advancedSearch">
+                <i class="glyphicon glyphicon-plus-sign"></i>
+                <font size="4">Advanced</font>
+            </a>
+            <div ng-show="advancedSearch" ng-repeat="field in advancedSearchFields">
+                <div class="col-md-2 col-md-offset-3">{{field}}</div>
+                <div class="col-md-5"><input type="text" name={{field}}></div>
+                <br>
+            </div>
+        </div>
 
       </div>
 
