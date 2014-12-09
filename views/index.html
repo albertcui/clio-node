@@ -27,7 +27,8 @@
 
       <div class="header">
 
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- color should be #174785 -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -132,10 +133,13 @@
                     
                   <div class="col-md-3">
                     <h3>Location</h3>
-                    <div ng-if="result.url_munged_display">
-                        Online: {{result.url_munged_display}}
+                    <div ng-if="result.url_munged_display.length">
+                        <div ng-repeat="data in result.url_munged_display" ng-init="temp = data.split('|||');">
+                            <a ng-href={{temp[2]}} >{{temp[1].trim()}} {{temp[3].trim()}}</a>
+                            <!--{{temp}}-->
+                        </div>
                     </div>
-                    <div ng-else="result.location_facet">
+                    <div ng-if="!result.url_munged_display.length && result.location_facet">
                         {{result.location_facet[0]}}
                     </div>
                   </div>
