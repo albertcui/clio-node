@@ -16,17 +16,21 @@ clioApp.controller('SearchController', function($scope, $http, $location){
 			media.push('Book')
 		}
 
-		if ($scope.article) {
-			media.push('Article')
+		if ($scope.video) {
+			media.push('Video')
 		}
 
-		if ($scope.ebook) {
+		if ($scope.eresource) {
 			media.push('Online')
 		}
 
 		if ($scope.journal) {
-			media.push('Journal')
+			media.push('Journal/Periodical')
 		}
+
+        if ($scope.other) {
+            media.push('Other')
+        }
 
         $location.path('/search').search({q: $scope.searchText})
 
