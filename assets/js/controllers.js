@@ -6,6 +6,9 @@ clioApp.controller('SearchController', function($scope, $http, $location){
 	$scope.maxSize = 5
 	$scope.currentPage = 1;
 
+    $scope.advancedSearch = false;
+    $scope.advancedSearchFields = ['Title','Author','Date','ISBN','Subject','Keywords']
+    
 	$scope.search = function() {
 
 		var media = []
