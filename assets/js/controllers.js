@@ -36,9 +36,12 @@ clioApp.controller('SearchController', function($scope, $http, $location){
             params: {search: $scope.searchText, offset: ($scope.currentPage - 1) * 10, types: media }
         })
         .success(function(data, status, headers, config){
-            $scope.desc = {'Author':'author_display',
-                             'Publisher':'full_publisher_display'
-                            }
+            $scope.desc = {'Author':'author_facet',
+                           'Publisher':'full_publisher_display',
+                           'ISBN':'isbn_display',
+                           'Summary':'summary_display',
+                           'Format':'format'
+                          }
         	$scope.hideJumbotron = true;
         	$scope.hideResults = false;
         	$scope.totalItems = data.numFound

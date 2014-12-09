@@ -116,7 +116,9 @@
                                 {{key}}
                             </div>
                             <div class="col-md-9">
-                                {{result[value][0]}}
+                                <div ng-repeat="val in result[value]">
+                                    {{val}}<br>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -134,13 +136,24 @@
                   <div class="col-md-3">
                     <h3>Location</h3>
                     <div ng-if="result.url_munged_display.length">
+                        Online:
                         <div ng-repeat="data in result.url_munged_display" ng-init="temp = data.split('|||');">
                             <a ng-href={{temp[2]}} >{{temp[1].trim()}} {{temp[3].trim()}}</a>
                             <!--{{temp}}-->
                         </div>
+                        <br>
                     </div>
-                    <div ng-if="!result.url_munged_display.length && result.location_facet">
-                        {{result.location_facet[0]}}
+                    
+                    <div ng-if="result.location_call_number_id_display && result.location_facet[0] != 'Online'">                      
+                        <div ng-init="call_num_data = result.location_call_number_id_display[0].split('|DELIM|'); 
+                                      call_num = call_num_data[0].split('>> ')">
+                            {{call_num[0]}}
+                            <div ng-if="call_num.length > 1">
+                                
+                                Call Number: {{call_num[1]}}
+                            </div>
+                        </div>
+                        
                     </div>
                   </div>
                     
