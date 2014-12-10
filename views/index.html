@@ -157,8 +157,13 @@
                         </div>
                     </div>
                   </div>
-                    
+                  <!--  
                   <span class="plus"><a ng-href="http://clio.columbia.edu/catalog/{{result['clio_id_display']}}?counter=1" title="Detailed Info"><i class="glyphicon glyphicon-plus"></i></a></span>
+                  -->
+                  <a href="" ng-click="fullDesc = !fullDesc">
+                      <span class="plus" ng-show="fullDesc"><i class="glyphicon glyphicon-minus"></i></span>
+                      <span class="plus" ng-show="!fullDesc"><i class="glyphicon glyphicon-plus"></i></span>
+                  </a>    
                 </article>
               </section>
           </li>

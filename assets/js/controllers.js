@@ -43,9 +43,9 @@ clioApp.controller('SearchController', function($scope, $http, $location){
             $scope.desc = {'Author':'author_facet',
                            'Publisher':'full_publisher_display',
                            'ISBN':'isbn_display',
-                           'Summary':'summary_display',
                            'Format':'format'
                           }
+            $scope.fullDesc = false;
         	$scope.hideJumbotron = true;
         	$scope.hideResults = false;
         	$scope.totalItems = data.numFound
