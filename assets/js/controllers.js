@@ -49,8 +49,18 @@ clioApp.controller('SearchController', function($scope, $http, $location){
         	$scope.hideJumbotron = true;
         	$scope.hideResults = false;
         	$scope.totalItems = data.numFound
-    		$scope.results = data.docs
+    		
     		console.log(data)
+            
+            //preprocess
+            var temp = data.docs
+            for(i=0; i<temp.length; i++)
+            {
+                call_num_data = temp[i].location_call_number_id_display[0].split('|DELIM|');
+                temp[i]['call_num'] = call_num_data[0].split('>> ');
+            }
+            //$scope.results = data.docs
+            $scope.results = temp
         })
         .error(function(data, status, headers, config){
 

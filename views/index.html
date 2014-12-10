@@ -144,17 +144,22 @@
                         </div>
                         <br>
                     </div>
-                    
+                    <!--
                     <div ng-if="result.location_call_number_id_display && result.location_facet[0] != 'Online'">                      
                         <div ng-init="call_num_data = result.location_call_number_id_display[0].split('|DELIM|'); 
                                       call_num = call_num_data[0].split('>> ')">
                             {{call_num[0]}}
                             <div ng-if="call_num.length > 1">
-                                
                                 Call Number: {{call_num[1]}}
                             </div>
                         </div>
-                        
+                    </div>
+                    -->
+                    <div ng-if="result.location_call_number_id_display && result.location_facet[0] != 'Online'">
+                        {{result.call_num[0]}}
+                        <div ng-if="results.call_num.length > 1">
+                            Call Number: {{result.call_num[1]}}
+                        </div>
                     </div>
                   </div>
                     
