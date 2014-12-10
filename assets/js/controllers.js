@@ -52,6 +52,10 @@ clioApp.controller('SearchController', function($scope, $http, $location){
     		
     		console.log(data)
             
+            $http.get('/assets/js/locations.json').success(function(response){
+                $scope.LOCATIONS = response;
+            }); 
+            
             //preprocess
             var temp = data.docs
             for(i=0; i<temp.length; i++)

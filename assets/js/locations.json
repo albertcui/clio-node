@@ -1,0 +1,291 @@
+{
+    "African Studies": {
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Ancient/Medieval": {
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Avery": {
+        "Floorplans": "http://library.columbia.edu/locations/avery/floorplans.html",
+        "Home Page": "http://library.columbia.edu/locations/avery.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionE.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionE.gif"
+    },
+    "Avery Classics": {
+        "Floorplans": "http://library.columbia.edu/locations/avery/floorplans.html",
+        "Home Page": "http://library.columbia.edu/locations/avery/classics.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionE.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionE.gif"
+    },
+    "Avery Drawings": {
+        "Floorplans": "http://library.columbia.edu/locations/avery/floorplans.html",
+        "Home Page": "http://library.columbia.edu/locations/avery/da.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionE.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionE.gif"
+    },
+    "Barnard": {
+        "Floorplan": "http://library.barnard.edu/using-library/floorplan",
+        "Home Page": "http://library.barnard.edu/",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionC.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionC.gif",
+        "Stacks Guide": "http://library.barnard.edu/find-books/stacks"
+    },
+    "Barnard Archives": {
+        "Floorplan": "http://library.barnard.edu/using-library/floorplan",
+        "Home Page": "http://library.barnard.edu/",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionC.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionC.gif",
+        "Stacks Guide": "http://library.barnard.edu/find-books/stacks"
+    },
+    "Barnard Center For Research On Women": {
+        "Home Page": "http://bcrw.barnard.edu/"
+    },
+    "Barnard Rare": {
+        "Floorplan": "http://library.barnard.edu/using-library/floorplan",
+        "Home Page": "http://library.barnard.edu/",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionC.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionC.gif",
+        "Stacks Guide": "http://library.barnard.edu/find-books/stacks"
+    },
+    "Barnard Special": {
+        "Floorplan": "http://library.barnard.edu/using-library/floorplan",
+        "Home Page": "http://library.barnard.edu/",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionC.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionC.gif",
+        "Stacks Guide": "http://library.barnard.edu/find-books/stacks"
+    },
+    "Burke": {
+        "Home Page": "http://library.columbia.edu/locations/burke.html",
+        "Location Guide": "http://library.columbia.edu/content/dam/libraryweb/floorplans/burke_location_guide.pdf",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionA.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionA.gif"
+    },
+    "Business": {
+        "Floorplans": "http://library.columbia.edu/content/dam/libraryweb/floorplans/business_floorplan.pdf",
+        "Home Page": "http://library.columbia.edu/locations/business.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionD.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionD.gif"
+    },
+    "Butler": {
+        "Call Number Guide": "http://library.columbia.edu/content/dam/libraryweb/libraries/butler/butler_stacks.pdf",
+        "Home Page": "http://library.columbia.edu/locations/butler.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Butler Media": {
+        "Home Page": "http://library.columbia.edu/locations/butler/media-services.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Butler Microforms": {
+        "Home Page": "http://library.columbia.edu/locations/pmrr.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Butler Periodicals": {
+        "Home Page": "http://library.columbia.edu/locations/pmrr.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Butler Reference": {
+        "Guides": "http://library.columbia.edu/locations/butler-reference.html",
+        "Home Page": "http://library.columbia.edu/locations/butler-reference.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Butler Reference Desk": {
+        "Guides": "http://library.columbia.edu/locations/butler-reference.html",
+        "Home Page": "http://library.columbia.edu/locations/butler-reference.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Butler Reserves": {
+        "Home Page": "http://library.columbia.edu/locations/butler-reserves.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Butler Stacks": {
+        "Call Number Guide": "http://library.columbia.edu/content/dam/libraryweb/locations/butler/butler_stacks.pdf",
+        "Floorplan": "http://library.columbia.edu/locations/butler/floorplan.html",
+        "Home Page": "http://library.columbia.edu/locations/butler-circulation.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Dakhla Library": {
+        "Home Page": "mailto:klg39@columbia.edu"
+    },
+    "Digital Humanities Center": {
+        "Directions": "http://library.columbia.edu/locations/dhc/directions.html",
+        "Home Page": "http://library.columbia.edu/locations/dhc.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Digital Music Lab": {
+        "Home Page": "http://library.columbia.edu/locations/music/music_lab.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionE.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionE.gif"
+    },
+    "Digital Science Center": {
+        "Directions": "http://library.columbia.edu/locations/science-library/directions.html",
+        "Home Page": "http://library.columbia.edu/locations/dsc.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionD.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionD.gif"
+    },
+    "Digital Social Science Center": {
+        "Home Page": "http://library.columbia.edu/locations/dssc.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionF.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionF.gif"
+    },
+    "Early Modern/Modern Europe": {
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "East Asian": {
+        "Home Page": "http://library.columbia.edu/locations/eastasian.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionE.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionE.gif"
+    },
+    "Electronic Text Service": {
+        "Home Page": "http://library.columbia.edu/locations/dhc.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Engineering": {
+        "Home Page": "http://library.columbia.edu/locations/engineering.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionD.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionD.gif"
+    },
+    "Geology": {
+        "Home Page": "http://library.columbia.edu/locations/geology.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionD.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionD.gif"
+    },
+    "Geoscience": {
+        "Home Page": "http://library.columbia.edu/locations/geoscience.html"
+    },
+    "Health Sciences": {
+        "Floorplans": "http://library.cumc.columbia.edu/library-floorplan",
+        "Home Page": "http://library.cumc.columbia.edu/"
+    },
+    "Health Sciences Web": {},
+    "Islamic Studies": {
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Journalism": {
+        "Home Page": "http://library.columbia.edu/locations/journalism.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Latin American Studies": {
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Law": {
+        "Home Page": "http://web.law.columbia.edu/library",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionF.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionF.gif"
+    },
+    "Lehman": {
+        "Floorplans": "http://library.columbia.edu/locations/lehman/floorplan.html",
+        "Home Page": "http://library.columbia.edu/locations/lehman.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionF.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionF.gif"
+    },
+    "Lehman Data Service": {
+        "Home Page": "http://library.columbia.edu/locations/dssc/data/service.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionF.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionF.gif"
+    },
+    "Lehman Map Room": {
+        "Home Page": "http://library.columbia.edu/locations/maps.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionF.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionF.gif"
+    },
+    "Lehman Suite": {
+        "Home Page": "http://library.columbia.edu/locations/rbml/units/lehman.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionF.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionF.gif"
+    },
+    "Lehman US Government Documents": {
+        "Home Page": "http://library.columbia.edu/locations/usgd.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionF.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionF.gif"
+    },
+    "LibraryWeb": {},
+    "Math-Science": {
+        "Home Page": "http://library.columbia.edu/locations/math.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionE.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionE.gif"
+    },
+    "Mathematics": {
+        "Home Page": "http://library.columbia.edu/locations/math.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionE.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionE.gif"
+    },
+    "Milstein": {
+        "Home Page": "http://library.columbia.edu/locations/undergraduate.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif",
+        "Shelving Guide": "http://library.columbia.edu/locations/undergraduate/call_number_guide.html"
+    },
+    "Modern & Comparative Studies": {
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Moral & Political Theory": {
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Music": {
+        "Home Page": "http://library.columbia.edu/locations/music.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionE.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionE.gif"
+    },
+    "NYS Psychiatric Institute": {
+        "Home Page": "http://nyspi.org/library/"
+    },
+    "Offsite": {
+        "Home Page": "http://library.columbia.edu/find/request/off-site.html"
+    },
+    "Oral History": {
+        "Home Page": "http://library.columbia.edu/locations/ccoh.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Orthopaedic Surgery": {
+        "Home Page": "http://www.columbiaortho.org/departments/russell-hibbs-memorial-library"
+    },
+    "Papyrus & Epigraphy": {
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Rare Book": {
+        "Home Page": "http://library.columbia.edu/locations/rbml.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "Science": {
+        "Home Page": "http://library.columbia.edu/locations/science-library.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionD.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionD.gif"
+    },
+    "Social Work": {
+        "Home Page": "http://library.columbia.edu/locations/social-work.html"
+    },
+    "South Asian Studies": {
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "US History & Literature": {
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    },
+    "University Archives": {
+        "Home Page": "http://library.columbia.edu/locations/cuarchives.html",
+        "Map": "http://www.columbia.edu/cu/lweb/services/maps/sectionG.html",
+        "Map URL": "http://www.columbia.edu/cu/lweb/data/services/maps/images/sectionG.gif"
+    }
+}
