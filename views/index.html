@@ -109,9 +109,9 @@
             <section class="col-md-12">
                 <article>
                   <div class="col-md-7">
-                    <h3><a href="#">{{result.title_display[0]}}</a></h3>
+                    <h3><a href="" ng-click="fullDesc = !fullDesc">{{result.title_display[0]}}</a></h3>
              
-                    <div ng-repeat="(key, value) in desc">
+                    <div ng-repeat="(key, value) in desc[fullDesc]">
                         <div ng-if="result[value]">
                             <div class="col-md-3">
                                 {{key}}

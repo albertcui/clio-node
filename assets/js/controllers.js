@@ -54,31 +54,50 @@ clioApp.controller('SearchController', function($scope, $http, $location){
             params: {search: $scope.searchText, offset: ($scope.currentPage - 1) * 10, types: media }
         })
         .success(function(data, status, headers, config){
-            $scope.desc = {'Author':'author_facet',
-                           'Publisher':'full_publisher_display',
-                           'ISBN':'isbn_display',
-                           'Format':'format'
-                          }
+            $scope.desc = {
+                'true':
+                    {'Title (Vernacular)':'title_vern_display',
+                    'Author':'author_facet',
+                    'Publisher':'full_publisher_display',
+                    'ISBN':'isbn_display',
+                    'Format':'format',
+                    'Language':'language_facet',
+                    'Repository':'repository_facet',
+                    'Subject':'subject_topic_facet',
+                    'Subject (Region)':'subject_geo_facet',
+                    'Subject (Era)':'subject_era_facet',
+                    'Subject (Genre)':'subject_form_facet',
+                    'Title Series':'title_series_display',
+                    'Summary':'summary_display'
+                    },
+                'false':
+                    {'Title (Vernacular)':'title_vern_display',
+                    'Author':'author_facet',
+                    'Publisher':'full_publisher_display',
+                    'ISBN':'isbn_display',
+                    'Format':'format'
+                    }
+            };
             $scope.fullDesc = false;
         	$scope.hideJumbotron = true;
         	$scope.hideResults = false;
-        	$scope.totalItems = data.numFound
+        	$scope.totalItems = data.numFound;
     		
-    		console.log(data)
+    		console.log(data);
             
             $http.get('/assets/js/locations.json').success(function(response){
                 $scope.LOCATIONS = response;
             }); 
             
             //preprocess
-            var temp = data.docs
+            var temp = data.docs;
             for(i=0; i<temp.length; i++)
             {
                 call_num_data = temp[i].location_call_number_id_display[0].split('|DELIM|');
                 temp[i]['call_num'] = call_num_data[0].split('>> ');
             }
             //$scope.results = data.docs
-            $scope.results = temp
+            $scope.results = temp;
         })
         .error(function(data, status, headers, config){
 
