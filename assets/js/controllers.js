@@ -9,6 +9,20 @@ clioApp.controller('SearchController', function($scope, $http, $location){
     $scope.advancedSearch = false;
     $scope.advancedSearchFields = ['Title','Author','Date','ISBN','Subject','Keywords']
     
+    $scope.email = function(name, email){
+        console.log(name + " " + email);
+ 
+        $http({
+            method:'POST',
+            url: '/email',
+            params: {name: name, email: email}
+        })
+        .success(function(data){
+            console.log("EMAILED!")
+        });
+ 
+    }
+    
 	$scope.search = function() {
 
 		var media = []
