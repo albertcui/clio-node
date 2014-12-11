@@ -1,6 +1,6 @@
-var clioApp = angular.module('clioApp', ['ui.bootstrap'])
+var clioApp = angular.module('clioApp', ['ui.bootstrap', 'ngDialog'])
 
-clioApp.controller('SearchController', function($scope, $http, $location){
+clioApp.controller('SearchController', function($scope, $http, $location, ngDialog){
 	$scope.hideJumbotron = false;
 	$scope.hideResults = true;
 	$scope.maxSize = 5
@@ -10,6 +10,11 @@ clioApp.controller('SearchController', function($scope, $http, $location){
     $scope.advancedSearchFields = ['Title','Author','Date','ISBN','Subject','Keywords']
     
     $scope.email = function(name, email){
+        ngDialog.open({ 
+            template: 'email_form',
+            className: 'ngdialog-theme-default'
+        });
+
         console.log(name + " " + email);
  
         $http({
