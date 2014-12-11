@@ -129,8 +129,8 @@
                     <ul class="meta-search">
                       <li><i class="glyphicon glyphicon-envelope"></i> <span ng-click="email(result.title_display[0],result.title_display[0])">Email Info </span></li>
                       <li><i class="glyphicon glyphicon-comment"></i> <span>SMS Info</span></li>
-                      <li><i class="glyphicon glyphicon-shopping-cart"></i> <span>Checkout</span></li>
-                      <li><i class="glyphicon glyphicon-download-alt"></i> <span>Download</span></li>
+                      <li><i class="glyphicon glyphicon-shopping-cart"></i> <a ng-href="http://clio.cul.columbia.edu:7018/vwebv/patronRequests?sk=patron&bibId={{result['clio_id_display']}}">Place a Hold</span></li>
+                      <li><i class="glyphicon glyphicon-download-alt"></i> <a ng-href="https://www1.columbia.edu/sec-cgi-bin/cul/forms/docdel?{{result['clio_id_display']}}">Scan & Deliver</a></li>
                     </ul>
                   </div>
                     
@@ -151,7 +151,7 @@
                             Call Number: {{result.call_num[1]}}
                         </div>
                         <div ng-if="LOCATIONS[result.location_facet[0]]" ng-init="location_data=LOCATIONS[result.location_facet[0]];">
-                            <img ng-src="{{location_data['Map URL']}}"/>
+                            <img ng-src="{{location_data['Map URL']}}" ng-show="fullDesc">
                             <a ng-if="location_data['Floorplan']" ng-href="{{location_data['Floorplan']}}">Floorplan</a><br>
                             <a ng-if="location_data['Call Number Guide']" ng-href="{{location_data['Call Number Guide']}}">Call Number Guide</a>
                         </div>
