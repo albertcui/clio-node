@@ -52,27 +52,19 @@
       <div class="row marketing">
         
         <!-- HTML for SEARCH BAR -->
-        <div class="search_boxes pull-left">
-          <div class="basic_search">
-          <div class="search_box quicksearch selected">
-            <form ng-submit="search()">
-              <div class="search_row input-append" escape="false">
-                <div class="form-group" style="display: inline;">
-                  <div class="input-group">
-                    <input class="search_q without_options form-control" id="quicksearch_q" name="q" placeholder="Catalog, Articles, Academic Commons, Library Web" type="text" value="" ng-model="searchText">
-                    <div class="input-group-btn">
+      <form ng-submit="search()">
+          <div class="form-group" style="display: inline;">
+              <div class="input-group">
+                  <input class="search_q without_options form-control" id="quicksearch_q" name="q" placeholder="Catalog, Articles, Academic Commons, Library Web" type="text" value="" ng-model="searchText">
+                  <div class="input-group-btn">
                       <button class="btn basic_search_button btn-primary form-control" name="commit" type="submit" value="Search">
-                        <span class="glyphicon glyphicon-search icon-white"></span> 
-                        <span class="visible-lg-inline">Search</span>
+                          <span class="glyphicon glyphicon-search icon-white"></span> 
+                          <span class="visible-lg-inline">Search</span>
                       </button>
-                    </div>
                   </div>
-                </div>
               </div>
-            </form>
           </div>
-          </div>
-        </div>
+      </form>
         
         <div><br/></div>
         <div class="row">
@@ -137,16 +129,21 @@
                   <div class="col-md-3">
                     <h3>Location</h3>
                     <div ng-if="result.url_munged_display.length">
-                        Online:
                         <div ng-repeat="data in result.url_munged_display" ng-init="temp = data.split('|||');">
-                            <a ng-href={{temp[2]}} >{{temp[1].trim()}} {{temp[3].trim()}}</a>
+                            <a ng-href={{temp[2]}} ng-if=" temp[1].trim()+temp[3].trim() ">Online: {{temp[1].trim()}} {{temp[3].trim()}}</a>
+                            <a ng-href={{temp[2]}} ng-if=" !(temp[1].trim()+temp[3].trim()) ">Online</a>
                             <!--{{temp}}-->
                         </div>
                         <br>
                     </div>
 
                     <div ng-if="result.location_call_number_id_display && result.location_facet[0] != 'Online'">
-                        {{result.call_num[0]}}
+                        <div ng-if="result.location_facet[0] == 'Offsite' ">
+                            <a ng-href="http://www.columbia.edu/cgi-bin/cul/offsite2?{{result['clio_id_display']}}">{{result.call_num[0]}}</a>
+                        </div>
+                        <div ng-if="result.location_facet[0] != 'Offsite' ">
+                            {{result.call_num[0]}}
+                        </div>
                         <div ng-if="result.call_num.length > 1">
                             Call Number: {{result.call_num[1]}}
                         </div>
