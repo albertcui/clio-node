@@ -66,27 +66,19 @@
       <div class="row marketing">
         
         <!-- HTML for SEARCH BAR -->
-        <div class="search_boxes pull-left">
-          <div class="basic_search">
-          <div class="search_box quicksearch selected">
-            <form ng-submit="search()">
-              <div class="search_row input-append" escape="false">
-                <div class="form-group" style="display: inline;">
-                  <div class="input-group">
-                    <input class="search_q without_options form-control" id="quicksearch_q" name="q" placeholder="Catalog, Articles, Academic Commons, Library Web" type="text" value="" ng-model="searchText">
-                    <div class="input-group-btn">
+      <form ng-submit="search()">
+          <div class="form-group" style="display: inline;">
+              <div class="input-group">
+                  <input class="search_q without_options form-control" id="quicksearch_q" name="q" placeholder="Catalog, Articles, Academic Commons, Library Web" type="text" value="" ng-model="searchText">
+                  <div class="input-group-btn">
                       <button class="btn basic_search_button btn-primary form-control" name="commit" type="submit" value="Search">
-                        <span class="glyphicon glyphicon-search icon-white"></span> 
-                        <span class="visible-lg-inline">Search</span>
+                          <span class="glyphicon glyphicon-search icon-white"></span> 
+                          <span class="visible-lg-inline">Search</span>
                       </button>
-                    </div>
                   </div>
-                </div>
               </div>
-            </form>
           </div>
-          </div>
-        </div>
+      </form>
         
         <div><br/></div>
         <div class="row">
@@ -123,9 +115,9 @@
             <section class="col-md-12">
                 <article>
                   <div class="col-md-7">
-                    <h3><a href="#">{{result.title_display[0]}}</a></h3>
+                    <h3><a href="" ng-click="fullDesc = !fullDesc">{{result.title_display[0]}}</a></h3>
              
-                    <div ng-repeat="(key, value) in desc">
+                    <div ng-repeat="(key, value) in desc[fullDesc]">
                         <div ng-if="result[value]">
                             <div class="col-md-3">
                                 {{key}}
@@ -143,29 +135,34 @@
                     <ul class="meta-search">
                       <li><span ng-click="email(result.title_display[0],LOCATIONS[result.location_facet[0]],result.location_call_number_id_display)"><i class="glyphicon glyphicon-envelope"></i> Email Info </span></li>
                       <li><i class="glyphicon glyphicon-comment"></i> <span>SMS Info</span></li>
-                      <li><i class="glyphicon glyphicon-shopping-cart"></i> <span>Checkout</span></li>
-                      <li><i class="glyphicon glyphicon-download-alt"></i> <span>Download</span></li>
+                      <li><i class="glyphicon glyphicon-shopping-cart"></i> <a ng-href="http://clio.cul.columbia.edu:7018/vwebv/patronRequests?sk=patron&bibId={{result['clio_id_display']}}">Place a Hold</span></li>
+                      <li><i class="glyphicon glyphicon-download-alt"></i> <a ng-href="https://www1.columbia.edu/sec-cgi-bin/cul/forms/docdel?{{result['clio_id_display']}}">Scan & Deliver</a></li>
                     </ul>
                   </div>
                     
                   <div class="col-md-3">
                     <h3>Location</h3>
                     <div ng-if="result.url_munged_display.length">
-                        Online:
                         <div ng-repeat="data in result.url_munged_display" ng-init="temp = data.split('|||');">
-                            <a ng-href={{temp[2]}} >{{temp[1].trim()}} {{temp[3].trim()}}</a>
+                            <a ng-href={{temp[2]}} ng-if=" temp[1].trim()+temp[3].trim() ">Online: {{temp[1].trim()}} {{temp[3].trim()}}</a>
+                            <a ng-href={{temp[2]}} ng-if=" !(temp[1].trim()+temp[3].trim()) ">Online</a>
                             <!--{{temp}}-->
                         </div>
                         <br>
                     </div>
 
                     <div ng-if="result.location_call_number_id_display && result.location_facet[0] != 'Online'">
-                        {{result.call_num[0]}}
+                        <div ng-if="result.location_facet[0] == 'Offsite' ">
+                            <a ng-href="http://www.columbia.edu/cgi-bin/cul/offsite2?{{result['clio_id_display']}}">{{result.call_num[0]}}</a>
+                        </div>
+                        <div ng-if="result.location_facet[0] != 'Offsite' ">
+                            {{result.call_num[0]}}
+                        </div>
                         <div ng-if="result.call_num.length > 1">
                             Call Number: {{result.call_num[1]}}
                         </div>
                         <div ng-if="LOCATIONS[result.location_facet[0]]" ng-init="location_data=LOCATIONS[result.location_facet[0]];">
-                            <img ng-src="{{location_data['Map URL']}}"/>
+                            <img ng-src="{{location_data['Map URL']}}" ng-show="fullDesc">
                             <a ng-if="location_data['Floorplan']" ng-href="{{location_data['Floorplan']}}">Floorplan</a><br>
                             <a ng-if="location_data['Call Number Guide']" ng-href="{{location_data['Call Number Guide']}}">Call Number Guide</a>
                         </div>
