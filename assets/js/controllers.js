@@ -9,23 +9,28 @@ clioApp.controller('SearchController', function($scope, $http, $location, ngDial
     $scope.advancedSearch = false;
     $scope.advancedSearchFields = ['Title','Author','Date','ISBN','Subject','Keywords']
     
-    $scope.email = function(name, email){
+    $scope.email = function(name, location, call){
         ngDialog.open({ 
             template: 'email_form',
-            className: 'ngdialog-theme-default'
-        });
-
-        console.log(name + " " + email);
- 
-        $http({
-            method:'POST',
-            url: '/email',
-            params: {name: name, email: email}
+            className: 'ngdialog-theme-default',
+            controller: ['$scope', function($scope) {
+                $scope.submit = function() {
+                    $http({
+                        method:'POST',
+                        url: '/email',
+                        params: {email: $scope.email, name: name, location: location, call: call}
+                    })
+                    .success(function(data){
+                        console.log("EMAILED!")
+                        $scope.closeThisDialog()
+                    })
+                    .error(function(data) {
+                        $scope.closeThisDialog()  
+                    })
+                    
+                }
+            }]
         })
-        .success(function(data){
-            console.log("EMAILED!")
-        });
- 
     }
     
 	$scope.search = function() {

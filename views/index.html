@@ -20,8 +20,12 @@
 
 
     <script type="text/ng-template" id="email_form">
-      <h1>Template heading</h1>
-      <p>Content goes here</p>
+      <form name ="email" ng-submit="submit()">
+        E-mail: <input type="email" ng-model="email" name="uEmail" required="" />
+        <button class="btn basic_search_button btn-primary form-control" name="commit" type="submit" value="Email Me">
+          <span class="visible-lg-inline">Email</span>
+        </button>
+      </form>
     </script>
 
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -136,7 +140,7 @@
                     
                   <div class="col-md-2">
                     <ul class="meta-search">
-                      <li><span ng-click="email(result.title_display[0],result.title_display[0])"><i class="glyphicon glyphicon-envelope"></i> Email Info </span></li>
+                      <li><span ng-click="email(result.title_display[0],LOCATIONS[result.location_facet[0]],result.location_call_number_id_display)"><i class="glyphicon glyphicon-envelope"></i> Email Info </span></li>
                       <li><i class="glyphicon glyphicon-comment"></i> <span>SMS Info</span></li>
                       <li><i class="glyphicon glyphicon-shopping-cart"></i> <span>Checkout</span></li>
                       <li><i class="glyphicon glyphicon-download-alt"></i> <span>Download</span></li>
