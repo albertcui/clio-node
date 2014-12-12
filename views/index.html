@@ -20,8 +20,9 @@
 
 
     <script type="text/ng-template" id="email_form">
-      <form name ="email" ng-submit="submit()">
-        E-mail: <input type="email" ng-model="email" name="uEmail" required="" />
+      <h1>Email</h1>
+      <form ng-submit="submit()">
+        E-mail: <input type="email" ng-model="email" required=""/>
         <button class="btn basic_search_button btn-primary form-control" name="commit" type="submit" value="Email Me">
           <span class="visible-lg-inline">Email</span>
         </button>

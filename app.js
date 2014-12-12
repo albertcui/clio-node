@@ -35,6 +35,10 @@ app.route('/search.json').get(function(req, res){
     })
 })
 
+app.route('/email').post(function(req, res){
+    console.log(req.param('email'))
+})
+
 /*
 var query = client.createQuery()
                 .q({id: 2140607})
