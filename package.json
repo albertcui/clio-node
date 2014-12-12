@@ -5,6 +5,8 @@
     "private": true,
     "dependencies": {
         "solr-client": "0.4.0",
-        "express": "*"
+        "express": "*",
+        "twilio": "1.10.0",
+        "sendgrid": "1.4.0"
 	}
 }
