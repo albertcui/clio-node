@@ -27,6 +27,16 @@
       </form>
     </script>
 
+    <script type="text/ng-template" id="text_form">
+      <h1>Text</h1>
+      <form ng-submit="submit()">
+        Number to Text: <input type="number" ng-model="number" required=""/>
+        <button class="btn basic_search_button btn-primary form-control" name="commit" type="submit" value="Text Me">
+          <span class="visible-lg-inline">Text Me</span>
+        </button>
+      </form>
+    </script>
+
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.js"></script>
     <script src="/assets/js/ui-bootstrap-tpls-0.12.0.min.js"></script>
@@ -132,7 +142,7 @@
                   <div class="col-md-2">
                     <ul class="meta-search">
                       <li><span ng-click="email(result.title_display[0],result.call_num)"><i class="glyphicon glyphicon-envelope"></i> Email Info </span></li>
-                      <li><i class="glyphicon glyphicon-comment"></i> <span>SMS Info</span></li>
+                      <li><span ng-click="text(result.title_display[0],result.call_num)"><i class="glyphicon glyphicon-comment"></i> SMS Info</span></li>
                       <li><i class="glyphicon glyphicon-shopping-cart"></i> <a ng-href="http://clio.cul.columbia.edu:7018/vwebv/patronRequests?sk=patron&bibId={{result['clio_id_display']}}">Place a Hold</span></li>
                       <li><i class="glyphicon glyphicon-download-alt"></i> <a ng-href="https://www1.columbia.edu/sec-cgi-bin/cul/forms/docdel?{{result['clio_id_display']}}">Scan & Deliver</a></li>
                     </ul>
