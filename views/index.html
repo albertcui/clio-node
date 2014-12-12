@@ -65,7 +65,7 @@
       
       <div class="col-md-8 col-md-offset-2">
           <div class="jumbotron" ng-hide="hideJumbotron" style="">
-              <h1 style="color: #002B7F; font-family:'trajanpro'; text-transform: uppercase; text-align: center; font-sze: 300%">CLIO</h1>
+              <h1 style="color: #002B7F; font-family:'trajanpro'; text-transform: uppercase; text-align: center">CLIO</h1>
           </div>
       </div>
       
@@ -176,7 +176,7 @@
                         <div ng-if="LOCATIONS[result.location_facet[0]]" ng-init="location_data=LOCATIONS[result.location_facet[0]];">
                             <a ng-if="location_data['Floorplan']" ng-href="{{location_data['Floorplan']}}">Floorplan</a><br>
                             <a ng-if="location_data['Call Number Guide']" ng-href="{{location_data['Call Number Guide']}}">Call Number Guide</a>
-                            <img ng-src="{{location_data['Map URL']}}" ng-show="fullDesc">
+                            <img ng-src="{{location_data['Map URL']}}" ng-show="fullDesc" align="right" style="max-width:400px">
                         </div>
                     </div>
                   </div>
