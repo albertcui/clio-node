@@ -6,8 +6,8 @@ clioApp.controller('SearchController', function($scope, $http, $location, ngDial
 	$scope.maxSize = 5
 	$scope.currentPage = 1;
 
-    $scope.advancedSearch = false;
-    $scope.advancedSearchFields = ['Title','Author','Date','ISBN','Subject','Keywords']
+    //$scope.advancedSearch = false;
+    //$scope.advancedSearchFields = ['Title','Author','Date','ISBN','Subject','Keywords']
     
     $scope.email = function(name, call){
         ngDialog.open({ 
