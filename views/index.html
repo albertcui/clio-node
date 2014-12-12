@@ -91,8 +91,6 @@
               </div>
           </div>
       </form>
-        
-        
 
         <!--
         <div name="advanced">
@@ -143,8 +141,8 @@
                     
                   <div class="col-md-2">
                     <ul class="meta-search">
-                      <li><span ng-click="email(result.title_display[0],result.call_num)"><i class="glyphicon glyphicon-envelope"></i> Email Info </span></li>
-                      <li><span ng-click="text(result.title_display[0],result.call_num)"><i class="glyphicon glyphicon-comment"></i> SMS Info</span></li>
+                      <li><a href="" ng-click="email(result.title_display[0],result.call_num)"><i class="glyphicon glyphicon-envelope"></i> Email Info </a></li>
+                      <li><a href="" ng-click="text(result.title_display[0],result.call_num)"><i class="glyphicon glyphicon-comment"></i> SMS Info</a></li>
                       <li><i class="glyphicon glyphicon-shopping-cart"></i> <a ng-href="http://clio.cul.columbia.edu:7018/vwebv/patronRequests?sk=patron&bibId={{result['clio_id_display']}}">Place a Hold</span></li>
                       <li><i class="glyphicon glyphicon-download-alt"></i> <a ng-href="https://www1.columbia.edu/sec-cgi-bin/cul/forms/docdel?{{result['clio_id_display']}}">Scan & Deliver</a></li>
                     </ul>
