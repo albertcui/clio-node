@@ -105,18 +105,20 @@
                 <br>
             </div>
         </div>
-        -->
+        
         <div name="help" ng-hide="hideResults">
             Can't find what you're looking for? Try adding more key words.
           </div>
-
+        -->
       </div>
 
       <div id="results" ng-hide="hideResults">
         <ul class="unstyled" style="list-style: none;">
           <hgroup class="mb20">
             <h1>Search Results</h1>
-            <h2 class="lead"><strong class="text-danger">{{totalItems}}</strong> results were found.</h2>               
+            <h2 class="lead"><strong class="text-danger">{{totalItems}}</strong> results were found. 
+                <i style="color:#ADADAD;">Can't find what you're looking for? Try adding more keywords.</i>
+            </h2>               
           </hgroup>
             
           <li class="search-result row" ng-repeat="result in results" >
@@ -152,8 +154,8 @@
                     <h3>Location</h3>
                     <div ng-if="result.url_munged_display.length">
                         <div ng-repeat="data in result.url_munged_display" ng-init="temp = data.split('|||');">
-                            <a ng-href={{temp[2]}} ng-if=" temp[1].trim()+temp[3].trim() ">Online: {{temp[1].trim()}} {{temp[3].trim()}}</a>
-                            <a ng-href={{temp[2]}} ng-if=" !(temp[1].trim()+temp[3].trim()) ">Online</a>
+                            <a ng-href={{temp[2]}} ng-if=" temp[1].trim()+temp[3].trim() "><b>Online</b>: {{temp[1].trim()}} {{temp[3].trim()}}</a>
+                            <a ng-href={{temp[2]}} ng-if=" !(temp[1].trim()+temp[3].trim()) "><b>Online</b></a>
                             <!--{{temp}}-->
                         </div>
                         <br>
@@ -164,7 +166,7 @@
                             <a ng-href="http://www.columbia.edu/cgi-bin/cul/offsite2?{{result['clio_id_display']}}">{{result.call_num[0]}}</a>
                         </div>
                         <div ng-if="result.location_facet[0] != 'Offsite' ">
-                            {{result.call_num[0]}}
+                            <b>{{result.call_num[0]}}</b>
                         </div>
                         <div ng-if="result.call_num.length > 1">
                             Call Number: {{result.call_num[1]}}
