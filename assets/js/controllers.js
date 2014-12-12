@@ -30,7 +30,38 @@ clioApp.controller('SearchController', function($scope, $http, $location, ngDial
                         params: p
                     })
                     .success(function(data){
-                        console.log("EMAILED!")
+                        $scope.closeThisDialog()
+                    })
+                    .error(function(data) {
+                        $scope.closeThisDialog()  
+                    })
+                    
+                }
+            }]
+        })
+    }
+
+    $scope.text = function(name, call){
+        ngDialog.open({ 
+            template: 'text_form',
+            className: 'ngdialog-theme-default',
+            controller: ['$scope', function($scope) {
+                $scope.submit = function() {
+
+                    var p = {number: $scope.number, name: name, location: call[0]}
+
+                    if (call.length > 1) {
+                        p.call = call[1]
+                    } else {
+                        p.call = ""
+                    }
+
+                    $http({
+                        method:'POST',
+                        url: '/text',
+                        params: p
+                    })
+                    .success(function(data){
                         $scope.closeThisDialog()
                     })
                     .error(function(data) {
